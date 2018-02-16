@@ -40,87 +40,45 @@ function userGame() {
     ansArr.push(userguess);
     console.log(ansArr);
     document.getElementById("yourPicks").innerHTML = ansArr;
-}
 
-
-/*
-   
-    
-
-   // Winning Algorithm
-    if (randomLetter == userguess) {
-
-   
-
+    if (randomLetter === userguess) {
         winCounter++;
         console.log(winCounter);
+        document.getElementById("win").innerHtml = winCounter;
+        alert("GameOver!! Press Enter to Reset the Game")
+
     
-        alert("You have won " + winCounter + " games");
-
-          getElementById("win").innerHtml = winCounter;
-
-        var playAgain = confirm("Do you want to play again, click on the Magic Ball?");
-        if (playAgain = true) {
-            ResetGame();
-            CompGame();
-            userGame();
+        
           
-        }
-        else {
-            alert("'Game Over! You Won ' + winCounter + ' times, You Lost ' + lostCounter + ' times'");
-            getElementbyid(IMAGE), change for a GAME OVER 
-
-        }
-
-        Try Again
     }
     else {
         guessCounter++;
         console.log(guessCounter);
-
+        document.getElementById("guessP").innerHtml = winCounter;
         oppCounter--;
         console.log(oppCounter);
+        document.getElementById("chancesLeft").innerHtml = winCounter;
 
-        if (guessCounter = 9) {
-            ResetGame();
+        if (guessCounter === 9) {
+
+            lostCounter++;
+            alert("Click on Reset to Play Again")
         }
 
-        else {
+        else{
             userGame();
         }
     }
 }
-/*
-function ResetGame() {
 
-    alert("Game Over! You Have Won " + winCounter + " times, You Have Lost " + lostCounter + " times");
+function ResetGame() {
+    
     guessCounter = 0;
     oppCounter = 9;
-    incorrect.splice(0, incorrect.length);
-    var playAgain = confirm("Do you want to play again, click on the Magic Ball?");
-    if (playAgain = true) {
-        CompGame();
-        userGame();
-    }
-    else {
-        alert("Game Over! You Won " + winCounter + " times, You Lost " + lostCounter + " times");
-
+    ansArr.splice(0, 9);
+    alert("To play again, click on the Start sign")
     }
 
-}
-
-
-CompGame();
-userGame();
-
-     
-
-
-    if input = to Randomw Variable: winCounter++, Alert Player "You won", prompt play again? , go back to random funtion
-    if not guess counter ++, oppCounter-1, cycle runs until winCounter is true or guessCounter = 9
-    if Guess counter is = to 9 then lostCounter + 1, Alert Player "you lost" play again? OK prompt randomize, pick new value, cancel "GameOVer" , reset value
-
-*/
 document.getElementById("start").addEventListener("click", CompGame);
 document.getElementById("guessB").addEventListener("click", userGame);
-
+document.getElementById("reset").addEventListener("click", ResetGame);
