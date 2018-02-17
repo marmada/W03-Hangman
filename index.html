@@ -31,10 +31,15 @@
             <h3 class="top">Instructions:</h3>
             <h2 class="top">Guess What Letter I'm thinking?</h2>
             <p class="top">You have 9 chances to guess the Correct Letter</p>
-            <div class="row justify-content-center">
-                <p id="guessB">Click to enter your guess</p>
+            <div class="row justify-content-center" id="InputArea">
+                <input type="text" id="userEntry" />
+                <button onclick="userGuess">Click me!</button>
                 <br>
-                <p id="reset">Reset</p>
+                <button onclick="resetGame()" id="reset">Reset</button>
+                <br>
+                <p id="gameOutput">
+                    <span>Message:</span>
+                </p>
             </div>
         </div>
 

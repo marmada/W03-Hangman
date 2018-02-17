@@ -27,11 +27,27 @@ body{
     border-width: 2px;
 
 }
-#guessB{
-width: 200px;
-height: 30px;
+button{
+width: 100px;
+height: 28px;
 background-color: orange;
 color: antiquewhite;
+font-size: 14px;
+font-weight: 600;
+text-align: center;
+vertical-align: center;
+margin-left: 25px;
+margin-right: auto;
+padding-top: 5px;
+margin-top: 5px;
+
+}
+
+#userEntry{
+width: 200px;
+height: 30px;
+background-color:white;
+color: red;
 font-size: 14px;
 font-weight: 600;
 text-align: center;
@@ -39,7 +55,6 @@ vertical-align: center;
 margin-left: auto;
 margin-right: auto;
 padding-top: 5px;
-
 }
 
 #reset{
@@ -53,6 +68,7 @@ padding-top: 5px;
     vertical-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     padding-top: 5px;
     
     }
@@ -70,3 +86,14 @@ th{
     margin-right: auto;
 }
 
+#InputArea {
+
+    width:350px;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gameOutput {
+    color: antiquewhite;
+}
