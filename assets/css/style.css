@@ -80,11 +80,6 @@ th{
 
 }
 
-.start  {
-    
-    margin-left: auto;
-    margin-right: auto;
-}
 
 #InputArea {
 
@@ -96,10 +91,4 @@ th{
 
 #gameOutput {
     color: antiquewhite;
-}
-
-#compChoice1{
-
-    color: black;
-    background: black;
 }
